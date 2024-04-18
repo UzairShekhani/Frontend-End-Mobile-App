@@ -8,6 +8,11 @@
     href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
     rel="stylesheet"
 />
+<style>
+    .detailcontainer{
+        background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.9));
+    }
+</style>
 </head>
 <body>
     <div class="w-full h-screen bg-black font-[helvetica_now_display]">
@@ -17,31 +22,59 @@
             </div>
             <div class="incommingcard z-[2] w-full absolute h-screen bg-purple-600"></div>
         </div>
-        <div class="absolute top-0 left-0 z-[4] w-full h-screen  px-5 py-6 flex flex-col justify-between">
-            <div class="navbar flex justify-between items-center text-white">
+        <div class="absolute top-0 left-0 z-[4] w-full h-screen flex flex-col justify-between">
+            <div class="navbar flex px-5 py-6 justify-between items-center text-white">
                 <div class="prflimg w-[3.5rem] h-[3.5rem] rounded-full overflow-hidden bg-red-600">
                     <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1528892952291-009c663ce843?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fHBvcnRyYWl0fGVufDB8fDB8fHww" alt="">
                 </div>
                 <h3 class=" text-2xl tracking-tighter font-medium">They liked you</h3>
                 <div class="chaticon relative flex items-center justify-center w-[3.5rem] rounded-full h-[3.5rem] bg-white/50">
                     <i class="opacity-80 ri-chat-3-fill"></i>
-                    <div class="badge flex items-center justify-center rounded-full absolute top-0 right-0 -translate-y-[5px] translate-x-[3px] w-5 h-5 bg-red-900">
+                    <div class="badge flex items-center justify-center rounded-full absolute top-0 right-0 -translate-y-[5px] translate-x-[3px] w-5 h-5 bg-[#FC5149]">
                         <h2 class="text-[13px] font-[400]">5</h2>
                     </div>
                 </div>
             </div>
-            <div class="details w-full">
-                <div class="flex gap-4">
-                    <i class="w-[2rem] h-[2rem] flex items-center bg-white rounded-full justify-center font-semibold ri-corner-left-up-line"></i>
-                    <h3 class="text-white py-1">USA, California</h3>
+            <div class="detailscontainer w-full ">
+                <div class="details px-5 py-6 w-full">
+                    <div class="flex gap-4">
+                        <i class="w-[2rem] h-[2rem] flex items-center bg-white rounded-full justify-center font-semibold ri-corner-left-up-line"></i>
+                        <h3 class="text-white py-1">USA, California</h3>
+                    </div>
+                    <div class="flex gap-5 text-white mt-1 ">
+                        <h1 class="text-6xl font-semibold tracking-tight text-7xl">Victoria</h1>
+                        <h1 class="text-6xl font-semibold tracking-tight text-7xl opacity-60">20</h1>
+                    </div>
+                    <div class="tags flex gap-3 text-white mt-4">
+                        <div class="tag flex items-center bg-white/30 px-5 py-2 rounded-full gap-3">
+                            <i class="ri-music-fill"></i>
+                            <h3 class="text-lg tracking-tight">Music</h3>
+                        </div>
+                        <div class="tag flex items-center bg-white/30 px-5 py-2 rounded-full gap-3">
+                            <i class="ri-music-fill"></i>
+                            <h3 class="text-lg tracking-tight">Music</h3>
+                        </div>
+                        <div class="tag flex items-center bg-white/30 px-5 py-2 rounded-full gap-3">
+                            <i class="ri-music-fill"></i>
+                            <h3 class="text-lg tracking-tight">Music</h3>
+                        </div>
+                    </div>
+                    <div class="bio text-white/80 mt-5 ">
+                        <h3 class="text-xl">Bio</h3>
+                        <p class="text-lg mt-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, et aliquid, nam debitis neque quas voluptatibus hic </p>
+                    </div>
+                    <div class="flex items-start mt-10 gap-3">
+                        <button class="py-3 fon rounded-full text-3xl w-1/2 bg-white">
+                            <i class="ri-close-fill"></i>
+                        </button>
+                        <button class="py-3 fon rounded-full text-3xl text-white w-1/2 bg-[#FC5149]">
+                            <i class="ri-heart-2-fill"></i>
+                        </button>
+                    </div>
                 </div>
-                <div class="flex gap-5 text-white mt-2">
-                    <h1 class="text-6xl font-semibold tracking-tight text-7xl">Victoria</h1>
-                    <h1 class="text-6xl font-semibold tracking-tight text-7xl opacity-60">20</h1>
-                </div>
-                
             </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>

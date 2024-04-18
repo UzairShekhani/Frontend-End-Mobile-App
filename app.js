@@ -57,13 +57,21 @@ var users = [
 
 ]
 function select(elem){
-    return
+    return document.querySelector(elem)
 }
 
 var curr = 0;
 
 (function setInitial() {
-    document.querySelector(".maincard img").src = users[curr].displayPic;
-    document.querySelector(".incomingcard img").src = users[curr + 1].displayPic;
+    select(".maincard img").src = users[curr].displayPic;
+    select(".incomingcard img").src = users[curr + 1].displayPic;
+
+    select(".prflimg img").src = users[curr].profilePic
+    select(".badge h2").textContent = users[curr].pendingMessages
+    select(".location h3").textContent = users[curr].location
+    select(".name h1:nth-child(1)").textContent = users[curr].name
+    select(".name h1:nth-child(2)").textContent = users[curr].age
+
+
     curr = 2
 })();

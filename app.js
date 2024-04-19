@@ -117,6 +117,17 @@ let curr = 0;
     curr = 2
 })();
 
-function imgChange() {
+
+
+(function imageChange() {
     
-}
+    
+
+})();
+
+let deny = select(".deny")
+let accept = select(".accept")
+
+deny.addEventListener("click",function(){
+    imageChange()
+})

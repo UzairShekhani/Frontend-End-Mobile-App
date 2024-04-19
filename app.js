@@ -6,8 +6,14 @@ var users = [
         location: "karachi , Pakistan",
         name: "Uzair",
         age: 18,
-        interests: ["Music" , "Painting"],
-        bio: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, et aliquid, nam debitis neque quas voluptatibus hic",
+        interests: [{
+            interests: "Painting",
+            incon: `<i class="ri-paint-brush-fill"></i>`
+        },{
+            interests: "Music",
+            incon: `<i class="ri-music-fill"></i>`
+        }],
+        bio: "Hi there! I'm Uzair, a passionate Web Developer   ",
         isFriend: null
     },
     {
@@ -17,8 +23,14 @@ var users = [
         location: "karachi , Pakistan",
         name: "Adil Ahmed",
         age: 33,
-        interests: ["Music" , "Painting"],
-        bio: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, et aliquid, nam debitis neque quas voluptatibus hic",
+        interests: [{
+            interests: "Painting",
+            incon: `<i class="ri-paint-brush-fill"></i>`
+        },{
+            interests: "Music",
+            incon: `<i class="ri-music-fill"></i>`
+        }],
+        bio: "Hi there! I'm Adil Ahmed, a passionate MERN stack Developer   ",
         isFriend: null
     },
     {
@@ -28,8 +40,14 @@ var users = [
         location: "karachi , Pakistan",
         name: "Sadia",
         age: 28,
-        interests: ["Music" , "Painting"],
-        bio: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, et aliquid, nam debitis neque quas voluptatibus hic",
+        interests: [{
+            interests: "Painting",
+            incon: `<i class="ri-paint-brush-fill"></i>`
+        },{
+            interests: "Music",
+            incon: `<i class="ri-music-fill"></i>`
+        }],
+        bio: "Hi there! I'm Sarah, a passionate Prompt Engineer     ",
         isFriend: null
     },
     {
@@ -39,8 +57,14 @@ var users = [
         location: "karachi , Pakistan",
         name: "Rabia",
         age: 5,
-        interests: ["Music" , "Painting"],
-        bio: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, et aliquid, nam debitis neque quas voluptatibus hic",
+        interests: [{
+            interests: "Painting",
+            incon: `<i class="ri-paint-brush-fill"></i>`
+        },{
+            interests: "Music",
+            incon: `<i class="ri-music-fill"></i>`
+        }],
+        bio: "Hi there! I'm Sarah, a Student    ",
         isFriend: null
     },
     {
@@ -50,8 +74,14 @@ var users = [
         location: "karachi , Pakistan",
         name: "Anabia",
         age: 4,
-        interests: ["Music" , "Painting"],
-        bio: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, et aliquid, nam debitis neque quas voluptatibus hic",
+        interests: [{
+            interests: "Painting",
+            incon: `<i class="ri-paint-brush-fill"></i>`
+        },{
+            interests: "Music",
+            incon: `<i class="ri-music-fill"></i>`
+        }],
+        bio: "Hi there! I'm Sarah, a Baby   ",
         isFriend: null
     },
 
@@ -60,7 +90,7 @@ function select(elem){
     return document.querySelector(elem)
 }
 
-var curr = 0;
+var curr = 4;
 
 (function setInitial() {
     select(".maincard img").src = users[curr].displayPic;
@@ -71,7 +101,18 @@ var curr = 0;
     select(".location h3").textContent = users[curr].location
     select(".name h1:nth-child(1)").textContent = users[curr].name
     select(".name h1:nth-child(2)").textContent = users[curr].age
+    
+    var clutter = ""
+    users[curr].interests.forEach(function(interests){
+        clutter += `<div class="tag flex items-center bg-white/30 px-5 py-2 rounded-full gap-3">
+            ${interests.incon}
+            <h3 class="text-lg tracking-tight capitalize">${interests.interests}</h3>
+        </div>`
+    })
 
+    select(".tags").innerHTML = clutter ;
+
+    select(".bio").textContent = users[curr].bio
 
     curr = 2
 })();

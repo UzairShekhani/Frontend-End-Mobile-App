@@ -1,4 +1,4 @@
-var users = [
+let users = [
     {
         profilePic:"https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cG9ydHJhaXQlNUN8ZW58MHx8MHx8fDA%3D",
         displayPic: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cG9ydHJhaXQlNUN8ZW58MHx8MHx8fDA%3D",
@@ -90,7 +90,7 @@ function select(elem){
     return document.querySelector(elem)
 }
 
-var curr = 4;
+let curr = 0;
 
 (function setInitial() {
     select(".maincard img").src = users[curr].displayPic;
@@ -102,7 +102,7 @@ var curr = 4;
     select(".name h1:nth-child(1)").textContent = users[curr].name
     select(".name h1:nth-child(2)").textContent = users[curr].age
     
-    var clutter = ""
+    let clutter = ""
     users[curr].interests.forEach(function(interests){
         clutter += `<div class="tag flex items-center bg-white/30 px-5 py-2 rounded-full gap-3">
             ${interests.incon}
@@ -116,3 +116,7 @@ var curr = 4;
 
     curr = 2
 })();
+
+function imgChange() {
+    
+}

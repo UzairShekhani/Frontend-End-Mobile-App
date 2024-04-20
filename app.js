@@ -121,35 +121,7 @@ let curr = 0;
 
 function imageChange() {
     
-    let tl = gsap.timeline({
-            onComplete: function(){
-               let main = select(".maincard")
-               let incoming = select(".incomingcard")
-
-               incoming.classList.remove("z-[3]");
-               incoming.classList.add("z-[2]");
-               incoming.classList.remove(".incomingcard")
-
-               main.classList.remove("z-[3]")
-               main.classList.remove("z-[2]")
-               gsap.set(mai)
-
-            }
-        })
-
-    tl.to(".maincard",{
-        scale: 1.1,
-        opacity: 0,
-        ease: Circ,
-        duration: .9
-    }, "a")
-
-    .from(".incomingcard",{
-        scale: .9,
-        opacity: 0,
-        ease: Circ,
-        duration: 1.1
-    },"a")
+    gsap.to()
 
 };
 

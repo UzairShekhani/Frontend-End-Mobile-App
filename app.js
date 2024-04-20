@@ -21,7 +21,7 @@ let users = [
         displayPic: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cG9ydHJhaXQlNUN8ZW58MHx8MHx8fDA%3D",
         pendingMessages: 4,
         location: "karachi , Pakistan",
-        name: "Adil Ahmed",
+        name: "Adil",
         age: 33,
         interests: [{
             interests: "Painting",
@@ -90,9 +90,9 @@ function select(elem){
     return document.querySelector(elem)
 }
 
-let curr = 0;
+let curr = 1;
 
-(function setInitial() {
+(function setInitial( ) {
     select(".maincard img").src = users[curr].displayPic;
     select(".incomingcard img").src = users[curr + 1].displayPic;
 
@@ -120,11 +120,13 @@ let curr = 0;
 
 
 function imageChange() {
-    let tl = gsap.timeline()
+    let tl = gsap.timeline ()
 
     tl.to(".maincard" , {
         scale: 1.1,
-            
+        opacity: 0,
+        ease : Circ,
+        duration : .9
     })
 
 };

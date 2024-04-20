@@ -120,8 +120,12 @@ let curr = 0;
 
 
 function imageChange() {
-    
-    gsap.to()
+    let tl = gsap.timeline()
+
+    tl.to(".maincard" , {
+        scale: 1.1,
+            
+    })
 
 };
 

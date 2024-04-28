@@ -6,8 +6,8 @@ let users = [
          location: "karachi , Pakistan",
         name: "Uzair",
         age: 18,
-        interests: [{
-            interests: "Painting",
+         interests: [{
+             interests: "Painting",
             incon: `<i class="ri-paint-brush-fill"></i>`
         },{
             interests: "Music",

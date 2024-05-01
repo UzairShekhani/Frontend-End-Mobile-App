@@ -3,9 +3,9 @@ let users = [
         profilePic:"https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cG9ydHJhaXQlNUN8ZW58MHx8MHx8fDA%3D",
         displayPic: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cG9ydHJhaXQlNUN8ZW58MHx8MHx8fDA%3D",
         pendingMessages: 4,
-         location: "karachi , Pakistan",
+          location: "karachi , Pakistan",
         name: "Uzair",
-        age: 18,
+        age: 16,
          interests: [{
              interests: "Painting",
             incon: `<i class="ri-paint-brush-fill"></i>`

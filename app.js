@@ -30,7 +30,7 @@ let users = [
             interests: "Music",
             incon: `<i class="ri-music-fill"></i>`
         }],
-        bio: "Hi world! I'm Adil Ahmed, a passionate MERN stack Developer   ",
+        bio: "Hi I'm Adil Ahmed, a passionate MERN stack Developer   ",
         isFriend: null
     },
     {
